@@ -1,6 +1,11 @@
 ProjectEuler::Application.routes.draw do
   root 'questions#question1'
   get 'questions/question1'
+  get 'questions/question2'
+  get 'questions/question3'
+  get 'questions/question4'
+  get 'questions/question5'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
