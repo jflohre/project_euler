@@ -1,28 +1,66 @@
-== README
+Currently a work in progress.
+Setting this up to be in a rails app. 
+I hope you enjoy it Big Astronaut
+First 3 questions:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# def the_sum_of_multiples(number)
+# 	sums = []
+# 	1.upto(number-1){ |num| 
+# 		 if num%3==0
+# 				sums <<num
+# 			elsif num%5==0
+# 				sums <<num
+			
+# 		end
+# p sums
+#  p num
+# 	}
+#  p "The sum of the numbers that are multiples of 3 and 5 are #{sums.reduce(:+)}"
 
-Things you may want to cover:
+# end
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# the_sum_of_multiples(1000)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# def fibonacci_numbers(array)
+
+# sum_of_array = array.inject { |sum, x| sum+x } 
+
+# p sum_of_array
+# 	while sum_of_array <=4000000 do
+# 		array.last(2).inject {|sum,x|
+#  		array << sum+x 
+#  		}
+#  		sum_of_array = array.inject { |sum, x| sum+x } 
+#  	end
+# p array.uniq
+# even_array = []
+# array.uniq.each { |x|
+
+# even_array << x unless x.odd?
+
+# }
+# p even_array
+# p even_array.inject(0) { |sum, x| sum+x } 
+# end
+
+
+# fibonacci_numbers([0,1])
+
+def prime_numbers(num)
+	primes = [0]
+
+	sum_of_primes = primes.inject { |sum, x| sum+x }
+	p sum_of_primes
+	while sum_of_primes != num do
+			1.upto(num) { |i| 
+				primes << i unless  num%i!=0
+		}
+	end
+p primes.each
+
+
+
+end
+
+prime_numbers(13195)
