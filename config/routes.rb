@@ -1,4 +1,5 @@
 ProjectEuler::Application.routes.draw do
+  get "static_pages/home"
   root 'questions#question1'
   resources :questions do
     post :question1, :on => :collection
