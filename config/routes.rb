@@ -1,6 +1,8 @@
 ProjectEuler::Application.routes.draw do
   root 'questions#question1'
-  get 'questions/question1'
+  resources :questions do
+    post :question1, :on => :collection
+  end
   get 'questions/question2'
   get 'questions/question3'
   get 'questions/question4'

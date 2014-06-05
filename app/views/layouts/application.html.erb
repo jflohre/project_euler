@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectEuler</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title><%= full_title(yield(:title)) %></title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
+<header>Welcome Big Astronaut</header>
 <body>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to "Welcome Big Astronaut", '#' %>
+				<nav>
+					<ul class="nav-pull-right">
+						<li><%= link_to "Home", '#' %></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="container">
 
-<%= yield %>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
-<%= link_to "Question1", questions_question1_path %>
 <%= link_to "Question2", questions_question2_path %>
 <%= link_to "Question3", questions_question3_path %>
 <%= link_to "Question4", questions_question4_path %>
